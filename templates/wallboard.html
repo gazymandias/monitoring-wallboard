@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-widt    h, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {#  CHANGE THIS TO UPDATE REFRESH TIMINGS #}
+    <meta http-equiv="refresh" content="5" >
+    <title>Monitoring Wallboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" rel="stylesheet"/>
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Google+Sans">
+       <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Lato">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/boot.css') }}">
+    <style>
+
+      body {
+        font-family: 'Lato', serif
+      }
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</head>
+
+
+
+<body class="fixed-nav sticky-footer blue" id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark blue fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">Monitoring Wallboard</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Table">
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="content-wrapper">
+        <div class="container-fluid" style="padding: 70px 40px 40px 40px">
+            <div class="row">
+                {%for i in range(0, item_count)%}
+
+                <div class="col-xl-3 col-md-4 col-sm-6 mb-3">
+                    <div class="card text-white {{status[i]}} o-hidden h-100">
+                        <div class="card-body">
+                            <div class="float-left">
+                                <div class="card-body-icon">
+                                    <i class="fa fa-android"></i> <b>{{process[i]}}</b>
+                                </div>
+                                <div>{{task[i]}}</div>
+                            </div>
+                        </div>
+                        <div class="card-footer text-white clearfix small z-1">
+                            <span class="float-left">
+                                <span class="text-nowrap">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                Started: {{start[i]}} |
+                                </span>
+                                <!--<span class="text-nowrap">-->
+                                <!--<i class="fa fa-code-fork" aria-hidden="true"></i>-->
+                                <!--Mem. {{robots[i]}}% |-->
+                                <!--</span>-->
+                                <!--<span class="text-nowrap">-->
+                                <!--<i class="fa fa-cogs" aria-hidden="true"></i>-->
+                                <!--Util. {{robots[i]}}% |-->
+                                <!--</span>-->
+                                <span class="text-nowrap">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                {{robots[i]}} |
+                                </span>
+                                <!--<span class="text-nowrap">-->
+                                <!--<i class="fa fa-heartbeat" aria-hidden="true"></i>-->
+                                <!--{{robots[i]}} |-->
+                                <!--</span>-->
+                                <span class="text-nowrap">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                Prg. {{numerator[i]}} / {{denominator[i]}} |
+                                </span>
+                                <span class="text-nowrap">
+                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                                Last activity: {{updated_at[i]}}
+                                </span>
+                            </span>
+                        </div>
+                        {#  REMOVE THIS MAYBE #}
+                               <div class="progress progress-{{status[i]}}"  style="height: 13px;">
+  <div class="progress-bar {{status[i]}}" role="progressbar"  style="width: {{progress[i]}}%;" aria-valuenow="{{status[i]}}" aria-valuemin="0" aria-valuemax="100" >{{progress[i]}}%</div>
+</div>
+                        {#  style="width: 25%;" END REMOVE #}
+                    </div>
+                </div>
+
+                 {% endfor %}
+            </div>
+
+ <footer class="sticky-footer">
+                <div class="container">
+                    <div class="text-center text-white">
+                        <small><a href='https://github.com/gazymandias'>gcadman</a> © 2022</small>
+                    </div>
+                </div>
+            </footer>
+            </div>
+                <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+        </div>
+
+            </body>
+
+</html>

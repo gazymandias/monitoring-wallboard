@@ -1,0 +1,101 @@
+:root {
+    --color-background: #20252a;
+    --color-code-background: #171b20;
+    --color-cello: #204263;
+    --color-pickled-bluewood: #2c3e50;
+    --color-spindle: #cfdff0;
+    --color-loblolly: #b3bdc7;
+    --color-spring-wood: #f8f8f2;
+    --color-text: #ffffff;
+    --color-succeeded: #88d8b0;
+    --color-failed: #ff6f69;
+    --color-warning: #ffcc5c;
+    --color-succeeded-dark: #252d30;
+    --color-failed-dark: #342c30;
+    --color-warning-dark: #34342f;
+    --color-unknown: #9ca3ab;
+}
+
+.blue {
+    background-color: #20252a;
+    border: transparent;
+}
+
+.success {
+    background-color: #88d8b0;
+}
+
+.warning {
+    background-color: #ffcc5c;
+}
+
+.danger {
+    background-color: #ff6f69;
+}
+
+/*.primary {*/
+/*  background-color: #342c30;*/
+/*}*/
+
+.error {
+    background-color: #cfdff0;
+}
+
+/*.home_text {*/
+/*  color: #252d30;*/
+/*    font-weight: bold;*/
+/*}*/
+
+.card-body .card-body-icon {
+    font-family: 'Google Sans', serif;
+}
+
+.card-body-icon {
+    font-weight: 900;
+    font-size: 125%;
+    font-family: 'Google Sans', serif;
+}
+
+
+.progress
+{
+    background-color: #2c3e50;
+}
+
+.progress-success
+{
+    background-color: #6ca88a;
+}
+
+.progress-danger
+{
+    background-color: #a34541;
+}
+
+.progress-warning
+{
+    background-color: #cfa54a;
+}
+
+.progress-error
+{
+    background-color: #afbecc;
+}
+
+.card-body {
+    color: #20252a;
+}
+
+.card-footer {
+    color: #20252a;
+}
+
+.text-nowrap {
+    color: #20252a;
+}
+
+.progress-bar
+{
+    /*background-color: #204263;*/
+color: #20252a;
+}
