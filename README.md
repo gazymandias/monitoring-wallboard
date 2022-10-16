@@ -19,6 +19,7 @@ Getting Started
 1. check container status (optional) `docker ps -a`
 1. test the endpoints
 1. visit http://localhost/home and run the generate_mock_data.py to start wallboard simulation
+1. command & c to quit
 1. remove service `docker-compose down`
 1. remove service and all data `docker-compose down --volumes`
 
