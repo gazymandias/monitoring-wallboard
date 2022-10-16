@@ -71,6 +71,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    count = 16
-    print(random.randint(1, count))
+    main()
