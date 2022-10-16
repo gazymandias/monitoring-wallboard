@@ -20,3 +20,4 @@ Getting Started
 1. test the endpoints
 1. remove service `docker-compose down`
 1. remove service and all data `docker-compose down --volumes`
+1. visit http://localhost/home and run the generate_mock_data.py to start wallboard simulation
