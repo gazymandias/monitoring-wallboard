@@ -3,7 +3,7 @@ import random
 from time import sleep
 
 status = ["success", "error", "warning", "danger", ""]
-task = ["exit_sap", "open_sap", "action_1", "action_2", "action_3", "run_checks"]
+task = ["exit_sap", "open_sap", "get_next_item", "validate_environment", "control_applications", "run_checks"]
 
 
 def send_request(request_type, url, data=None):
