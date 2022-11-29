@@ -1,7 +1,8 @@
 # monitoring-wallboard
 Microservice Monitoring Wallboard REST API with Flask, Docker Compose and Postgres
 
-<img src="monitoring_wallboard.png" width="960" height="540"  alt=""/>
+
+https://user-images.githubusercontent.com/48953362/204524102-e07eeb37-8185-4be0-bbe0-50c064973068.mov
 
 Prerequisites
 -------------
